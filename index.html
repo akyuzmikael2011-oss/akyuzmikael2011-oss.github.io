@@ -3,180 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>WDEV Solutions</title>
 
-<!-- SEO -->
-<meta name="description" content="Moderne Websites für Unternehmen. Professionelles Webdesign, Domain & Support.">
+<meta name="description" content="Moderne Websites für Unternehmen. Mehr Kunden durch professionelles Webdesign.">
 
 <style>
 :root{
-  --green1:#22c55e;
-  --green2:#16a34a;
+--green1:#22c55e;
+--green2:#16a34a;
 }
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-  font-family:-apple-system,system-ui;
-  overflow-x:hidden;
-  line-height:1.6;
-  transition:0.3s;
+font-family:-apple-system,system-ui;
+overflow-x:hidden;
+line-height:1.6;
+transition:0.3s;
+background: radial-gradient(circle at top, #052e16, #022c22, #020617);
+color:white;
 }
 
-/* DARK / LIGHT */
-@media(prefers-color-scheme:dark){
-  body{background:#05070f;color:white;}
-}
+/* LIGHT MODE */
 @media(prefers-color-scheme:light){
-  body{background:#f5f7fb;color:#111;}
+body{
+background: radial-gradient(circle at top, #dcfce7, #bbf7d0, #f0fdf4);
+color:#111;
+}
 }
 
 /* BACKGROUND */
 .bg{
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:-1;
-  overflow:hidden;
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
 }
 
 .blob{
-  position:absolute;
-  width:500px;
-  height:500px;
-  background:radial-gradient(circle,var(--green1),transparent);
-  filter:blur(120px);
-  animation:move 20s infinite alternate;
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#22c55e,transparent);
+filter:blur(140px);
+animation:move 20s infinite alternate;
 }
 
 @keyframes move{
-  0%{transform:translate(0,0);}
-  100%{transform:translate(120px,-150px);}
+0%{transform:translate(0,0);}
+100%{transform:translate(120px,-150px);}
 }
 
 /* NAV */
 nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px;
-  backdrop-filter:blur(15px);
-  position:sticky;
-  top:0;
+display:flex;
+justify-content:space-between;
+padding:20px;
+backdrop-filter:blur(15px);
+position:sticky;
+top:0;
 }
 
 nav a{
-  margin-left:15px;
-  text-decoration:none;
-  color:inherit;
-  opacity:0.7;
+margin-left:15px;
+text-decoration:none;
+color:inherit;
+opacity:0.7;
 }
 
 /* HERO */
 .hero{
-  text-align:center;
-  padding:100px 20px;
-  max-width:800px;
-  margin:auto;
+text-align:center;
+padding:100px 20px;
+max-width:800px;
+margin:auto;
 }
 
 .hero h1{
-  font-size:clamp(32px,6vw,54px);
-  font-weight:900;
-  background:linear-gradient(135deg,var(--green1),var(--green2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+font-size:clamp(32px,6vw,54px);
+font-weight:900;
+background:linear-gradient(135deg,var(--green1),var(--green2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-  opacity:0.7;
-  margin-top:15px;
+opacity:0.7;
+margin-top:15px;
 }
 
 /* BUTTON */
 .btn{
-  margin-top:25px;
-  display:inline-block;
-  padding:14px 26px;
-  background:linear-gradient(135deg,var(--green1),var(--green2));
-  border-radius:12px;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
+margin-top:25px;
+display:inline-block;
+padding:14px 26px;
+background:linear-gradient(135deg,var(--green1),var(--green2));
+border-radius:12px;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 
 /* GLASS */
 .glass{
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(25px) saturate(200%);
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,0.15);
-  box-shadow:0 10px 40px rgba(0,0,0,0.3);
-  padding:25px;
-  transition:0.3s;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(25px) saturate(200%);
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+padding:25px;
+transition:0.3s;
 }
 
-/* INTERACTIONS */
+/* INTERACTION */
 @media(hover:hover){
-  .glass:hover{
-    transform:translateY(-8px);
-  }
-  .btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 10px 40px rgba(34,197,94,0.4);
-  }
+.glass:hover{
+transform:translateY(-8px);
+}
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 10px 40px rgba(34,197,94,0.4);
+}
 }
 
 .glass:active{
-  transform:scale(0.97);
+transform:scale(0.97);
 }
 
 /* SECTIONS */
 .section{
-  padding:80px 15px;
-  text-align:center;
+padding:80px 15px;
+text-align:center;
 }
 
 .cards{
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  justify-content:center;
-  margin-top:30px;
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+margin-top:30px;
 }
 
 .card{
-  width:100%;
-  max-width:300px;
-  opacity:0;
-  transform:translateY(30px);
-  transition:0.5s;
+width:100%;
+max-width:300px;
+opacity:0;
+transform:translateY(30px);
+transition:0.5s;
 }
 
 .card.show{
-  opacity:1;
-  transform:translateY(0);
+opacity:1;
+transform:translateY(0);
 }
 
 /* PRICE */
 .price{
-  font-size:28px;
-  font-weight:800;
-  margin:10px 0;
+font-size:28px;
+font-weight:800;
+margin:10px 0;
 }
 
 /* CONTACT */
 .contact{
-  max-width:400px;
-  margin:auto;
+max-width:400px;
+margin:auto;
 }
 
 /* FOOTER */
 footer{
-  text-align:center;
-  padding:30px;
-  opacity:0.5;
+text-align:center;
+padding:30px;
+opacity:0.5;
 }
 </style>
 </head>
@@ -184,96 +184,119 @@ footer{
 <body>
 
 <div class="bg">
-  <div class="blob"></div>
+<div class="blob"></div>
 </div>
 
 <nav>
-  <b>WDEV</b>
-  <div>
-    <a href="#preise">Preise</a>
-    <a href="#kontakt">Kontakt</a>
-  </div>
+<b>WDEV</b>
+<div>
+<a href="#preise">Preise</a>
+<a href="#kontakt">Kontakt</a>
+</div>
 </nav>
 
 <section class="hero">
-  <h1>Websites die Kunden bringen 🚀</h1>
-  <p>Modernes Webdesign für echte Ergebnisse.</p>
-  <a class="btn" href="#kontakt">Jetzt starten</a>
+<h1>Websites die Kunden bringen 🚀</h1>
+<p>Modernes Webdesign für echte Ergebnisse.</p>
+<a class="btn" href="#kontakt">Jetzt starten</a>
 </section>
 
 <section class="section">
-  <h2>Warum mich wählen?</h2>
+<h2>Warum mich wählen?</h2>
 
-  <div class="cards">
+<div class="cards">
 
-    <div class="glass card">
-      <h3>💸 Mehr Kunden</h3>
-      <p>Deine Website überzeugt Besucher und bringt neue Anfragen.</p>
-    </div>
+<div class="glass card">
+<h3>💸 Mehr Kunden</h3>
+<p>Deine Website überzeugt Besucher und bringt neue Anfragen.</p>
+</div>
 
-    <div class="glass card">
-      <h3>📱 Mobile optimiert</h3>
-      <p>Perfekt für Smartphones – dort kommen die meisten Kunden her.</p>
-    </div>
+<div class="glass card">
+<h3>📱 Mobile optimiert</h3>
+<p>Perfekt für Smartphones – dort kommen die meisten Kunden her.</p>
+</div>
 
-    <div class="glass card">
-      <h3>⚡ Schnell & modern</h3>
-      <p>Top Performance + modernes Design.</p>
-    </div>
+<div class="glass card">
+<h3>⚡ Schnell & modern</h3>
+<p>Top Performance + modernes Design.</p>
+</div>
 
-  </div>
+</div>
+</section>
+
+<section class="section">
+<h2>Ergebnisse & Referenzen</h2>
+
+<div class="cards">
+
+<div class="glass card">
+<h3>Friseursalon</h3>
+<p>"Unsere neue Website bringt uns deutlich mehr Kunden."</p>
+</div>
+
+<div class="glass card">
+<h3>KFZ Werkstatt</h3>
+<p>"Wir bekommen jetzt viel mehr Anfragen über die Website."</p>
+</div>
+
+<div class="glass card">
+<h3>Restaurant</h3>
+<p>"Mehr Reservierungen durch bessere Online-Präsenz."</p>
+</div>
+
+</div>
 </section>
 
 <section class="section" id="preise">
-  <h2>Pakete</h2>
+<h2>Pakete</h2>
 
-  <div class="cards">
+<div class="cards">
 
-    <div class="glass card">
-      <h3>Standard</h3>
-      <div class="price">300€</div>
-      <p>+ 15€/Monat</p>
-    </div>
+<div class="glass card">
+<h3>Standard</h3>
+<div class="price">300€</div>
+<p>+ 15€/Monat</p>
+</div>
 
-    <div class="glass card">
-      <h3>Standard Plus</h3>
-      <div class="price">300€</div>
-      <p>+ 20€/Monat</p>
-    </div>
+<div class="glass card">
+<h3>Standard Plus</h3>
+<div class="price">300€</div>
+<p>+ 20€/Monat</p>
+</div>
 
-    <div class="glass card">
-      <h3>Deluxe</h3>
-      <div class="price">600€</div>
-      <p>+ 30€/Monat</p>
-    </div>
+<div class="glass card">
+<h3>Deluxe</h3>
+<div class="price">600€</div>
+<p>+ 30€/Monat</p>
+</div>
 
-  </div>
+</div>
 </section>
 
 <section class="section" id="kontakt">
-  <h2>Kontakt</h2>
+<h2>Kontakt</h2>
 
-  <div class="glass contact">
-    <p><b>Email:</b> mikaelakyuz@wdevsolutions.de</p>
-    <a class="btn" href="mailto:mikaelakyuz@wdevsolutions.de">Email senden</a>
-  </div>
+<div class="glass contact">
+<p><b>Email:</b> mikaelakyuz@wdevsolutions.de</p>
+<a class="btn" href="mailto:mikaelakyuz@wdevsolutions.de">Email senden</a>
+</div>
 
 </section>
 
 <footer>
-  © 2026 WDEV Solutions
+© 2026 WDEV Solutions
 </footer>
 
 <script>
 const cards = document.querySelectorAll('.card');
 
 window.addEventListener('scroll', () => {
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-    if(top < window.innerHeight - 80){
-      card.classList.add('show');
-    }
-  });
+cards.forEach(card => {
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 80){
+card.classList.add('show');
+}
+});
 });
 </script>
 
