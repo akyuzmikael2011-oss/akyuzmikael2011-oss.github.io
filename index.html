@@ -6,212 +6,46 @@
 <title>WDEV Solutions</title>
 
 <style>
-:root {
-  --accent: #3b82f6;
-}
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  transition: 0.3s;
+  font-family: -apple-system, sans-serif;
 }
-
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #0f172a;
-    color: white;
-  }
+  body { background:#0f172a; color:white;}
 }
-
 @media (prefers-color-scheme: light) {
-  body {
-    background: #f8fafc;
-    color: black;
-  }
+  body { background:#f8fafc; color:black;}
 }
-
-/* Glass */
 .glass {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  padding:20px;
 }
-
-/* Layout */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  background: var(--accent);
-  border-radius: 12px;
-  color: white;
-  text-decoration: none;
-}
-
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 280px;
-  padding: 25px;
-}
-
-.price {
-  font-size: 28px;
-  margin: 10px 0;
-}
-
-/* Kontakt */
-.contact {
-  max-width: 500px;
-  margin: auto;
-  padding: 30px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.6;
-}
+nav {display:flex; justify-content:space-between; padding:20px;}
+a {text-decoration:none; color:inherit; margin:10px;}
+.hero {text-align:center; padding:100px 20px;}
+.btn {background:#3b82f6; padding:12px 20px; border-radius:10px; color:white;}
 </style>
-</head>
 
+</head>
 <body>
 
 <nav>
-  <div><b>WDEV</b></div>
-  <div>
-    <a href="#leistungen">Leistungen</a>
-    <a href="#preise">Preise</a>
-    <a href="#kontakt">Kontakt</a>
-  </div>
+<div><b>WDEV</b></div>
+<div>
+<a href="index.html">Home</a>
+<a href="leistungen.html">Leistungen</a>
+<a href="preise.html">Preise</a>
+<a href="kontakt.html">Kontakt</a>
+</div>
 </nav>
 
 <section class="hero">
-  <h1>Professionelle Websites für dein Business 🚀</h1>
-  <p>Wir erstellen moderne, schnelle und verkaufsstarke Websites</p>
-  <a class="btn" href="#kontakt">Jetzt starten</a>
+<h1>Moderne Websites für dein Business 🚀</h1>
+<p>Schnell, professionell und verkaufsstark</p>
+<a class="btn" href="kontakt.html">Kontakt</a>
 </section>
-
-<section class="section" id="leistungen">
-  <h2>Unsere Leistungen</h2>
-  <div class="cards">
-
-    <div class="card glass">
-      <h3>Webdesign</h3>
-      <p>Moderne und mobil optimierte Websites für jedes Gerät.</p>
-    </div>
-
-    <div class="card glass">
-      <h3>Domain & Setup</h3>
-      <p>Wir kümmern uns um alles: Domain, Hosting und Einrichtung.</p>
-    </div>
-
-    <div class="card glass">
-      <h3>Support</h3>
-      <p>Schneller Support und Anpassungen jederzeit möglich.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <h2>Warum uns wählen?</h2>
-  <div class="cards">
-
-    <div class="card glass">
-      <h3>Schnell online</h3>
-      <p>Deine Website ist innerhalb kürzester Zeit einsatzbereit.</p>
-    </div>
-
-    <div class="card glass">
-      <h3>Modernes Design</h3>
-      <p>Liquid Glass Design und aktuelle Trends sorgen für Eindruck.</p>
-    </div>
-
-    <div class="card glass">
-      <h3>Alles aus einer Hand</h3>
-      <p>Website, Domain und Email – komplett integriert.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section" id="preise">
-  <h2>Pakete & Preise</h2>
-
-  <div class="cards">
-
-    <div class="card glass">
-      <h3>Standard</h3>
-      <p>Website + Wunsch-Domain</p>
-      <div class="price">300€</div>
-      <p>+ 15€/Monat</p>
-    </div>
-
-    <div class="card glass">
-      <h3>Standard Plus</h3>
-      <p>Website + Domain + Business Email</p>
-      <div class="price">300€</div>
-      <p>+ 20€/Monat</p>
-    </div>
-
-    <div class="card glass">
-      <h3>Deluxe</h3>
-      <p>Alles + KI Telefon Agent</p>
-      <div class="price">600€</div>
-      <p>+ 30€/Monat</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section" id="kontakt">
-  <h2>Kontakt</h2>
-
-  <div class="glass contact">
-    <h3>Schreib uns eine Email</h3>
-    <p>Email: mikaelakyuz@wdevsolutions.de</p>
-    <a class="btn" href="mailto:mikaelakyuz@wdevsolutions.de">Email senden</a>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 WDEV Solutions
-</footer>
 
 </body>
 </html>
