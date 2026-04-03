@@ -1,33 +1,119 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Meine Website</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 { font-size: 40px; }
-    p { color: #94a3b8; }
-    .btn {
-      background: #3b82f6;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WDEV Solutions</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* Glass Effekt */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #3b82f6;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Cards */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 30px;
+  width: 250px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+</style>
+
 </head>
 <body>
 
-<h1>Ich erstelle Websites 🚀</h1>
-<p>Professionelle Websites für dein Business</p>
+<nav>
+  <div class="logo">WDEV</div>
+  <div>Webdesign</div>
+</nav>
 
-<a class="btn" href="mailto:info@deinedomain.de">Kontakt</a>
+<section class="hero">
+  <h1>Ich erstelle moderne Websites 🚀</h1>
+  <p>Professionelle Websites für dein Business</p>
+  <a class="btn" href="mailto:info@wdevsolutions.de">Kontakt</a>
+</section>
+
+<section class="container">
+  <div class="card glass">
+    <h3>Website Erstellung</h3>
+    <p>Moderne & schnelle Websites für dein Unternehmen</p>
+  </div>
+
+  <div class="card glass">
+    <h3>Design</h3>
+    <p>Sauberes, modernes UI mit Glassmorphism</p>
+  </div>
+
+  <div class="card glass">
+    <h3>Support</h3>
+    <p>Ich helfe dir jederzeit bei Änderungen</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 WDEV Solutions
+</footer>
 
 </body>
 </html>
