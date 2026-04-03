@@ -14,7 +14,7 @@ overflow-x:hidden;
 transition:0.3s;
 }
 
-/* DARK LIGHT */
+/* DARK / LIGHT */
 @media (prefers-color-scheme: dark){
 body{background:#05070f;color:white;}
 }
@@ -22,7 +22,7 @@ body{background:#05070f;color:white;}
 body{background:#f4f7fb;color:#111;}
 }
 
-/* BACKGROUND ANIMATION */
+/* BACKGROUND */
 .bg{
 position:fixed;
 width:100%;
@@ -33,62 +33,38 @@ overflow:hidden;
 
 .blob{
 position:absolute;
-width:600px;
-height:600px;
+width:500px;
+height:500px;
 background:radial-gradient(circle,#3b82f6,transparent);
-filter:blur(140px);
+filter:blur(120px);
 animation:move 20s infinite alternate;
-}
-
-.blob:nth-child(2){
-background:radial-gradient(circle,#9333ea,transparent);
-top:50%;
-left:60%;
-animation-duration:25s;
-}
-
-.blob:nth-child(3){
-background:radial-gradient(circle,#06b6d4,transparent);
-top:20%;
-left:20%;
-animation-duration:30s;
 }
 
 @keyframes move{
 0%{transform:translate(0,0);}
-100%{transform:translate(150px,-200px);}
+100%{transform:translate(120px,-150px);}
 }
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:25px 40px;
-backdrop-filter:blur(20px);
+padding:20px;
+backdrop-filter:blur(15px);
 position:sticky;
 top:0;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:inherit;
-opacity:0.7;
-}
-
-nav a:hover{opacity:1;}
-
 /* HERO */
 .hero{
 text-align:center;
-padding:140px 20px;
+padding:100px 20px;
 max-width:900px;
 margin:auto;
-animation:fadeUp 1s ease;
 }
 
 .hero h1{
-font-size:56px;
+font-size:clamp(32px,6vw,56px);
 font-weight:900;
 background:linear-gradient(135deg,#3b82f6,#9333ea);
 -webkit-background-clip:text;
@@ -97,63 +73,68 @@ background:linear-gradient(135deg,#3b82f6,#9333ea);
 
 .hero p{
 opacity:0.7;
-margin-top:20px;
-font-size:18px;
+margin-top:15px;
+font-size:clamp(14px,3vw,18px);
 }
 
+/* BUTTON */
 .btn{
-margin-top:30px;
+margin-top:25px;
 display:inline-block;
-padding:16px 30px;
+padding:14px 24px;
 background:linear-gradient(135deg,#3b82f6,#9333ea);
 border-radius:14px;
 color:white;
 text-decoration:none;
-font-weight:600;
 transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.1);
-box-shadow:0 10px 50px rgba(59,130,246,0.6);
-}
-
-/* GLASS ULTRA */
+/* GLASS */
 .glass{
 background:rgba(255,255,255,0.08);
-backdrop-filter:blur(30px) saturate(200%);
-border-radius:24px;
+backdrop-filter:blur(25px) saturate(200%);
+border-radius:20px;
 border:1px solid rgba(255,255,255,0.15);
-box-shadow:0 10px 60px rgba(0,0,0,0.3);
-padding:35px;
-transition:0.4s;
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+padding:25px;
+transition:0.3s;
 }
 
-/* HOVER EFFECT */
+/* DESKTOP HOVER */
+@media (hover:hover){
 .glass:hover{
-transform:translateY(-12px) scale(1.05);
-box-shadow:0 30px 80px rgba(59,130,246,0.3);
+transform:translateY(-10px) scale(1.03);
+}
+.btn:hover{
+transform:scale(1.08);
+}
+}
+
+/* MOBILE TOUCH */
+.glass:active{
+transform:scale(0.97);
 }
 
 /* SECTIONS */
 .section{
-padding:120px 20px;
+padding:80px 15px;
 text-align:center;
 }
 
 .cards{
 display:flex;
-gap:30px;
-justify-content:center;
 flex-wrap:wrap;
-margin-top:60px;
+gap:15px;
+justify-content:center;
+margin-top:30px;
 }
 
 .card{
-width:320px;
+width:100%;
+max-width:320px;
 opacity:0;
 transform:translateY(40px);
-transition:0.6s;
+transition:0.5s;
 }
 
 .card.show{
@@ -161,28 +142,22 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* PRICING */
+/* PRICE */
 .price{
-font-size:40px;
-font-weight:900;
-margin:10px 0;
+font-size:32px;
+font-weight:800;
 }
 
 /* CONTACT */
 .contact{
-max-width:500px;
+max-width:400px;
 margin:auto;
 }
 
-/* ANIMATIONS */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
+/* FOOTER */
 footer{
 text-align:center;
-padding:50px;
+padding:30px;
 opacity:0.5;
 }
 </style>
@@ -191,8 +166,6 @@ opacity:0.5;
 <body>
 
 <div class="bg">
-<div class="blob"></div>
-<div class="blob"></div>
 <div class="blob"></div>
 </div>
 
@@ -206,7 +179,7 @@ opacity:0.5;
 
 <section class="hero">
 <h1>Websites die Kunden bringen 🚀</h1>
-<p>Modernes Design trifft echte Ergebnisse.</p>
+<p>Modern. Schnell. Optimiert für jedes Gerät.</p>
 <a class="btn" href="#kontakt">Jetzt starten</a>
 </section>
 
@@ -217,17 +190,17 @@ opacity:0.5;
 
 <div class="glass card">
 <h3>💸 Mehr Kunden</h3>
-<p>Deine Website wird so gebaut, dass sie Kunden überzeugt und Umsatz bringt.</p>
+<p>Optimiert für echte Ergebnisse, nicht nur Design.</p>
 </div>
 
 <div class="glass card">
-<h3>⚡ Schnell online</h3>
-<p>Ich bringe deine Website schnell und stressfrei live.</p>
+<h3>📱 Mobile First</h3>
+<p>Perfekt angepasst für Smartphone Nutzer.</p>
 </div>
 
 <div class="glass card">
-<h3>🚀 Premium Design</h3>
-<p>Modernes Design wie große Agenturen – Vertrauen garantiert.</p>
+<h3>⚡ Schnell & modern</h3>
+<p>Top Performance + modernes UI.</p>
 </div>
 
 </div>
@@ -240,21 +213,18 @@ opacity:0.5;
 
 <div class="glass card">
 <h3>Standard</h3>
-<p>Website + Wunsch Domain</p>
 <div class="price">300€</div>
 <p>+ 15€/Monat</p>
 </div>
 
 <div class="glass card">
 <h3>Standard Plus</h3>
-<p>Website + Domain + Business Email</p>
 <div class="price">300€</div>
 <p>+ 20€/Monat</p>
 </div>
 
 <div class="glass card">
 <h3>Deluxe</h3>
-<p>Alles + KI Telefon Agent</p>
 <div class="price">600€</div>
 <p>+ 30€/Monat</p>
 </div>
@@ -277,17 +247,25 @@ opacity:0.5;
 </footer>
 
 <script>
+/* DEVICE DETECTION */
+const isMobile = /iPhone|Android|iPad|iPod/i.test(navigator.userAgent);
+
 /* SCROLL ANIMATION */
 const cards = document.querySelectorAll('.card');
 
 window.addEventListener('scroll', () => {
   cards.forEach(card => {
     const top = card.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
+    if(top < window.innerHeight - 80){
       card.classList.add('show');
     }
   });
 });
+
+/* MOBILE OPTIMIZATION */
+if(isMobile){
+  document.body.style.backdropFilter = "none";
+}
 </script>
 
 </body>
